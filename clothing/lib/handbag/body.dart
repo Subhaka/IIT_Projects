@@ -1,7 +1,6 @@
 import 'package:clothing/constants.dart';
 import 'package:flutter/material.dart';
 import 'Product.dart';
-import '../categories.dart';
 import 'details.dart';
 import 'itemcard.dart';
 void main(){

@@ -1,14 +1,9 @@
-import 'file:///C:/Users/Subhaka/Desktop/sdgp/clothing/lib/handbag/Product.dart';
 import 'package:clothing/constants.dart';
 import 'package:clothing/footwear/Footwear.dart';
 import 'package:clothing/footwear/footwearcolorandsize.dart';
 import 'package:clothing/footwear/footweardescription.dart';
-import 'package:clothing/jewellary/jewellarywithimage.dart';
-import 'package:clothing/jewellary/jewellery.dart';
-import 'package:clothing/jewellary/jwellarycolorandsize.dart';
-import 'package:clothing/jewellary/jwellarydescription.dart';
 
-import 'file:///C:/Users/Subhaka/Desktop/sdgp/clothing/lib/handbag/producttitlewithimage.dart';
+
 import 'package:flutter/material.dart';
 
 import '../counterwithsvg.dart';

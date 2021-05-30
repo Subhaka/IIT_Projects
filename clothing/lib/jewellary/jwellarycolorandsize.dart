@@ -2,7 +2,7 @@ import 'package:clothing/jewellary/jewellery.dart';
 import 'package:flutter/material.dart';
 
 import '../colordot.dart';
-import '../constants.dart';
+
 
 
 class JwellaryColorAndSize extends StatelessWidget{

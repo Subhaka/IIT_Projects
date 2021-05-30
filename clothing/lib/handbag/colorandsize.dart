@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Product.dart';
-import 'body_details.dart';
+
 import '../colordot.dart';
 import '../constants.dart';
 

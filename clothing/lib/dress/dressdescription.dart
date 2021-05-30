@@ -1,7 +1,5 @@
-import 'package:clothing/footwear/Footwear.dart';
+
 import 'package:flutter/material.dart';
-
-
 import '../constants.dart';
 import 'dress.dart';
 

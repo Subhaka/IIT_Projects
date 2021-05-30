@@ -2,7 +2,7 @@
 import 'package:clothing/constants.dart';
 import 'package:clothing/jewellary/bodydetailsjwellary.dart';
 import 'package:clothing/jewellary/jewellery.dart';
-import 'package:clothing/jewellary/jewellerybody.dart';
+
 import 'package:flutter/material.dart';
 void main() {
   runApp() {
