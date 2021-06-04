@@ -1,4 +1,3 @@
-
 import 'package:clothing/constants.dart';
 import 'package:clothing/handbag/producttitlewithimage.dart';
 import 'package:flutter/material.dart';
@@ -37,37 +36,63 @@ class DetailsBody extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget>[
-                     ColorAndSize(product: product,),
-                      SizedBox(height: kDefaultPaddin/2,),
-                      Description(product: product,),
-                      SizedBox(height: kDefaultPaddin/2,),
+                      ColorAndSize(
+                        product: product,
+                      ),
+                      SizedBox(
+                        height: kDefaultPaddin / 2,
+                      ),
+                      Description(
+                        product: product,
+                      ),
+                      SizedBox(
+                        height: kDefaultPaddin / 2,
+                      ),
                       CounterWithSaveBtn(),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin),
-                      child:Row(children: [
-                         Container(
-                           margin: EdgeInsets.only(right: kDefaultPaddin),
-                           height: 50,width: 58,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(18),
-                                border: Border.all(
-                                color: product.color,)),child: IconButton(icon: Icon(Icons.add_shopping_cart_outlined,color: product.color,),onPressed: (){},),
-                          ),
-                          Expanded(
-                            child: SizedBox(
-                              height: 50,
-                              child: FlatButton(
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-                                color: product.color,
-                                onPressed: (){},child: Text("Buy Now".toUpperCase(),
-                                style: TextStyle(fontSize: 17,
-                                    fontWeight: FontWeight.bold,color: Colors.white),),),
-                            ),
-                          ),
-                      ],)
-
-
-                      )],
+                          padding: const EdgeInsets.symmetric(
+                              vertical: kDefaultPaddin),
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: kDefaultPaddin),
+                                height: 50,
+                                width: 58,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(18),
+                                    border: Border.all(
+                                      color: product.color,
+                                    )),
+                                child: IconButton(
+                                  icon: Icon(
+                                    Icons.add_shopping_cart_outlined,
+                                    color: product.color,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ),
+                              Expanded(
+                                child: SizedBox(
+                                  height: 50,
+                                  child: FlatButton(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(18)),
+                                    color: product.color,
+                                    onPressed: () {},
+                                    child: Text(
+                                      "Buy Now".toUpperCase(),
+                                      style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ))
+                    ],
                   ),
                 ),
                 ProductTitleWithImage(product: product)

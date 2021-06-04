@@ -1,32 +1,34 @@
-
 import 'package:clothing/constants.dart';
-import 'package:clothing/dress/dressbodtdetails.dart';
+import 'package:clothing/watch/watchbodtdetails.dart';
 import 'package:flutter/material.dart';
 
-import 'dress.dart';
+import 'watch.dart';
+
 void main() {
   runApp() {
-    DetailsScreenDress();
+    DetailsScreenWatch();
   }
 }
 
-class DetailsScreenDress extends StatelessWidget {
-  final Dress dress ;
+class DetailsScreenWatch extends StatelessWidget {
+  final Watch watch;
 
-  const DetailsScreenDress({Key key, this.dress}) : super(key: key);
+  const DetailsScreenWatch({Key key, this.watch}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: dress.color,
+      backgroundColor: watch.color,
       appBar: buildAppBar(context),
-      body: DetailsBodyDress(dress: dress,),
+      body: DetailsBodyWatch(
+        watch: watch,
+      ),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: dress.color,
+      backgroundColor: watch.color,
       elevation: 0,
       leading: IconButton(
         icon: Icon(Icons.arrow_back_outlined),

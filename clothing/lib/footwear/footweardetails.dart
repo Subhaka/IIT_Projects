@@ -1,8 +1,8 @@
-
 import 'package:clothing/constants.dart';
 import 'package:clothing/footwear/Footwear.dart';
 import 'package:clothing/footwear/footwearbodydetails.dart';
 import 'package:flutter/material.dart';
+
 void main() {
   runApp() {
     DetailsScreenFootWear();
@@ -10,7 +10,7 @@ void main() {
 }
 
 class DetailsScreenFootWear extends StatelessWidget {
-  final FootWear footWear ;
+  final FootWear footWear;
 
   const DetailsScreenFootWear({Key key, this.footWear}) : super(key: key);
 
@@ -19,7 +19,9 @@ class DetailsScreenFootWear extends StatelessWidget {
     return Scaffold(
       backgroundColor: footWear.color,
       appBar: buildAppBar(context),
-      body: DetailsBodyFootWear(footWear: footWear,),
+      body: DetailsBodyFootWear(
+        footWear: footWear,
+      ),
     );
   }
 

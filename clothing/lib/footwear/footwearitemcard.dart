@@ -1,7 +1,5 @@
-
 import 'package:clothing/footwear/Footwear.dart';
 import 'package:flutter/material.dart';
-
 import '../constants.dart';
 
 class ItemCardFootWear extends StatelessWidget {
@@ -23,18 +21,18 @@ class ItemCardFootWear extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Container(
-                padding: EdgeInsets.all(kDefaultPaddin),
-                height: 160,
-                width: 150,
-                decoration: BoxDecoration(
-                  color: footWear.color,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child:Hero(
-                  tag: "${footWear.id}",
-                  child: Image.asset(footWear.image),
-                ),)
-          ),
+            padding: EdgeInsets.all(kDefaultPaddin),
+            height: 160,
+            width: 150,
+            decoration: BoxDecoration(
+              color: footWear.color,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Hero(
+              tag: "${footWear.id}",
+              child: Image.asset(footWear.image),
+            ),
+          )),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Text(

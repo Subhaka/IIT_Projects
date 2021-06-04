@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
-import 'dress.dart';
+import 'watch.dart';
 
 class ItemCardDress extends StatelessWidget {
-  final Dress dress;
+  final Watch watch;
   final Function press;
 
   const ItemCardDress({
     Key key,
-    this.dress,
+    this.watch,
     this.press,
   }) : super(key: key);
 
@@ -21,29 +21,29 @@ class ItemCardDress extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Container(
-                padding: EdgeInsets.all(kDefaultPaddin),
-                height: 160,
-                width: 150,
-                decoration: BoxDecoration(
-                  color: dress.color,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child:Hero(
-                  tag: "${dress.id}",
-                  child: Image.asset(dress.image),
-                ),)
-          ),
+            padding: EdgeInsets.all(kDefaultPaddin),
+            height: 160,
+            width: 150,
+            decoration: BoxDecoration(
+              color: watch.color,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Hero(
+              tag: "${watch.id}",
+              child: Image.asset(watch.image),
+            ),
+          )),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Text(
-              dress.title,
+              watch.title,
               style: TextStyle(color: kTextLightColor),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Text(
-              "\$${dress.price}",
+              "\$${watch.price}",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           )

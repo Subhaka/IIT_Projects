@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'Product.dart';
 import '../constants.dart';
 
@@ -21,19 +20,19 @@ class ItemCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(kDefaultPaddin),
-              height: 160,
-               width: 150,
-              decoration: BoxDecoration(
-                color: product.color,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child:Hero(
-                tag: "${product.id}",
+              child: Container(
+            padding: EdgeInsets.all(kDefaultPaddin),
+            height: 160,
+            width: 150,
+            decoration: BoxDecoration(
+              color: product.color,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Hero(
+              tag: "${product.id}",
               child: Image.asset(product.image),
-            ),)
-          ),
+            ),
+          )),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Text(

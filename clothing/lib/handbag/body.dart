@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'Product.dart';
 import 'details.dart';
 import 'itemcard.dart';
-void main(){
+
+void main() {
   runApp(Body());
 }
 
@@ -14,15 +15,16 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin,vertical: 20),
-        //   child: Text(
-        //     "Women",
-        //     style: Theme.of(context)
-        //         .textTheme
-        //         .headline5
-        //         .copyWith(fontWeight: FontWeight.bold),
-        //   ),
-         ),
+          padding: const EdgeInsets.symmetric(
+              horizontal: kDefaultPaddin, vertical: 20),
+          //   child: Text(
+          //     "Women",
+          //     style: Theme.of(context)
+          //         .textTheme
+          //         .headline5
+          //         .copyWith(fontWeight: FontWeight.bold),
+          //   ),
+        ),
         // Categories(),
         Expanded(
             child: Padding(

@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
 import '../colordot.dart';
-import 'dress.dart';
+import 'watch.dart';
 
-class DressColorAndSize extends StatelessWidget{
-  const DressColorAndSize({
-    Key key, this.dress
-  }):super(key: key);
-  final Dress dress;
+class WatchColorAndSize extends StatelessWidget {
+  const WatchColorAndSize({Key key, this.watch}) : super(key: key);
+  final Watch watch;
+
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: <Widget>[
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text("Color"),
-              Row(children: <Widget>[
-                ColorDot(color: dress.color,isSelected: true,),
-                ColorDot(color: Color(0xFFF8C078)),
-                ColorDot(color: Color(0xFFA29B9B),),
-              ],)
+            children: [
+              Text("Color"),
+              Row(
+                children: <Widget>[
+                  ColorDot(
+                    color: watch.color,
+                    isSelected: true,
+                  ),
+                  ColorDot(color: Color(0xFFF8C078)),
+                  ColorDot(
+                    color: Color(0xFFA29B9B),
+                  ),
+                ],
+              )
             ],
           ),
         ),
@@ -35,5 +42,4 @@ class DressColorAndSize extends StatelessWidget{
       ],
     );
   }
-
 }

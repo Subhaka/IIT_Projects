@@ -1,15 +1,15 @@
+import 'watch.dart';
 import 'package:clothing/constants.dart';
-import 'package:clothing/footwear/Footwear.dart';
-import 'package:clothing/footwear/footwearcolorandsize.dart';
-import 'package:clothing/footwear/footweardescription.dart';
 import 'package:flutter/material.dart';
 import '../counterwithsvg.dart';
-import 'footwearwithimage.dart';
+import 'watchcolorandsize.dart';
+import 'watchdescription.dart';
+import 'watchtitlewithimage.dart';
 
-class DetailsBodyFootWear extends StatelessWidget {
-  final FootWear footWear;
+class DetailsBodyWatch extends StatelessWidget {
+  final Watch watch;
 
-  const DetailsBodyFootWear({Key key, this.footWear}) : super(key: key);
+  const DetailsBodyWatch({Key key, this.watch}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +36,14 @@ class DetailsBodyFootWear extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget>[
-                      FootWearColorAndSize(
-                        footWear: footWear,
+                      WatchColorAndSize(
+                        watch: watch,
                       ),
                       SizedBox(
                         height: kDefaultPaddin / 2,
                       ),
-                      FootWearDescription(
-                        footWear: footWear,
+                      WatchDescription(
+                        watch: watch,
                       ),
                       SizedBox(
                         height: kDefaultPaddin / 2,
@@ -61,12 +61,12 @@ class DetailsBodyFootWear extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(18),
                                     border: Border.all(
-                                      color: footWear.color,
+                                      color: watch.color,
                                     )),
                                 child: IconButton(
                                   icon: Icon(
                                     Icons.add_shopping_cart_outlined,
-                                    color: footWear.color,
+                                    color: watch.color,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -78,7 +78,7 @@ class DetailsBodyFootWear extends StatelessWidget {
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(18)),
-                                    color: footWear.color,
+                                    color: watch.color,
                                     onPressed: () {},
                                     child: Text(
                                       "Buy Now".toUpperCase(),
@@ -95,8 +95,8 @@ class DetailsBodyFootWear extends StatelessWidget {
                     ],
                   ),
                 ),
-                FootWearTitleWithImage(
-                  footWear: footWear,
+                WatchTitleWithImage(
+                  dress: watch,
                 )
               ],
             ),

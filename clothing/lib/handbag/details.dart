@@ -1,13 +1,8 @@
-
 import 'Product.dart';
 import 'body_details.dart';
 import 'package:clothing/constants.dart';
 import 'package:flutter/material.dart';
-void main() {
-  runApp() {
-    DetailsScreen();
-  }
-}
+
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
@@ -19,7 +14,9 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: product.color,
       appBar: buildAppBar(context),
-      body: DetailsBody(product: product,),
+      body: DetailsBody(
+        product: product,
+      ),
     );
   }
 

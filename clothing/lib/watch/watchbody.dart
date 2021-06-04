@@ -1,14 +1,14 @@
 import 'package:clothing/constants.dart';
-import 'package:clothing/footwear/footweardetails.dart';
-import 'package:clothing/footwear/footwearitemcard.dart';
+import 'package:clothing/watch/watch.dart';
+import 'package:clothing/watch/watchdetails.dart';
+import 'package:clothing/watch/watchitemcard.dart';
 import 'package:flutter/material.dart';
-import 'Footwear.dart';
 
 void main() {
-  runApp(FootWearBody());
+  runApp(WatchBody());
 }
 
-class FootWearBody extends StatelessWidget {
+class WatchBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,18 +30,18 @@ class FootWearBody extends StatelessWidget {
             child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
           child: GridView.builder(
-              itemCount: footwear.length,
+              itemCount: watch.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   childAspectRatio: 0.65,
                   mainAxisSpacing: kDefaultPaddin,
                   crossAxisSpacing: kDefaultPaddin),
-              itemBuilder: (context, index) => ItemCardFootWear(
-                    footWear: footwear[index],
+              itemBuilder: (context, index) => ItemCardDress(
+                    watch: watch[index],
                     press: () => Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return DetailsScreenFootWear(
-                        footWear: footwear[index],
+                      return DetailsScreenWatch(
+                        watch: watch[index],
                       );
                     })),
                   )),

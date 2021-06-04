@@ -1,13 +1,13 @@
-import 'package:clothing/jewellary/jewellery.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
+import 'watch.dart';
 
-class JwellaryTitleWithImage extends StatelessWidget {
-  const JwellaryTitleWithImage({
+class WatchTitleWithImage extends StatelessWidget {
+  const WatchTitleWithImage({
     Key key,
-    @required this.jewellery,
+    @required this.dress,
   }) : super(key: key);
-  final Jewellery jewellery;
+  final Watch dress;
 
   @override
   Widget build(BuildContext context) {
@@ -17,35 +17,37 @@ class JwellaryTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Jewellery",
+            "Ladies Watch",
             style: TextStyle(color: Colors.white),
           ),
           Text(
-            jewellery.title,
+            dress.title,
             style: Theme.of(context)
                 .textTheme
                 .headline4
                 .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          // SizedBox(height: kDefaultPaddin/28,),
+          SizedBox(
+            height: kDefaultPaddin / 28,
+          ),
           Row(
             children: <Widget>[
               RichText(
                   text: TextSpan(children: [
                 TextSpan(text: "Price\n"),
                 TextSpan(
-                    text: "\$${jewellery.price}",
+                    text: "\$${dress.price}",
                     style: Theme.of(context).textTheme.headline3.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold))
               ])),
               SizedBox(
-                width: kDefaultPaddin,
+                width: kDefaultPaddin / 0.3,
               ),
               Expanded(
                   child: Hero(
-                      tag: "${jewellery.id}",
+                      tag: "${dress.id}",
                       child: Image.asset(
-                        jewellery.image,
+                        dress.image,
                         fit: BoxFit.fill,
                       )))
             ],

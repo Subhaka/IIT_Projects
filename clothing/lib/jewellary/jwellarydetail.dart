@@ -1,9 +1,8 @@
-
 import 'package:clothing/constants.dart';
 import 'package:clothing/jewellary/bodydetailsjwellary.dart';
 import 'package:clothing/jewellary/jewellery.dart';
-
 import 'package:flutter/material.dart';
+
 void main() {
   runApp() {
     DetailsScreenJwellary();
@@ -11,7 +10,7 @@ void main() {
 }
 
 class DetailsScreenJwellary extends StatelessWidget {
-  final Jewellery jewellery ;
+  final Jewellery jewellery;
 
   const DetailsScreenJwellary({Key key, this.jewellery}) : super(key: key);
 
@@ -20,7 +19,9 @@ class DetailsScreenJwellary extends StatelessWidget {
     return Scaffold(
       backgroundColor: jewellery.color,
       appBar: buildAppBar(context),
-      body: DetailsBodyJewellary(jewellery: jewellery,),
+      body: DetailsBodyJewellary(
+        jewellery: jewellery,
+      ),
     );
   }
 

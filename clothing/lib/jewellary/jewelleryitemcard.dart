@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'jewellery.dart';
@@ -23,18 +22,18 @@ class ItemCardJwellary extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Container(
-                padding: EdgeInsets.all(kDefaultPaddin),
-                height: 160,
-                width: 150,
-                decoration: BoxDecoration(
-                  color: jewellary.color,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child:Hero(
-                  tag: "${jewellary.id}",
-                  child: Image.asset(jewellary.image),
-                ),)
-          ),
+            padding: EdgeInsets.all(kDefaultPaddin),
+            height: 160,
+            width: 150,
+            decoration: BoxDecoration(
+              color: jewellary.color,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Hero(
+              tag: "${jewellary.id}",
+              child: Image.asset(jewellary.image),
+            ),
+          )),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Text(
